@@ -135,6 +135,7 @@ int main() {
 	{
 		try
 		{
+
 			cout << "1. Tambah Data" << endl;
 			cout << "2. Hapus Data" << endl;
 			cout << "3. Tampilkan Data" << endl;
@@ -146,7 +147,29 @@ int main() {
 			{
 			case 1:
 				addNode();
-				cout << "Data"
+				cout << "Data Berhasil Ditambahkan" << endl;
+				system("pause");
+				system("cls");
+				break;
+			case 2:
+				if (listEmpty())
+				{
+					cout << "List Kosong" << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				int nim;
+				cout << "Masukkan NIM: ";
+				cin >> mim;
+				if (deleteNode(nim)) {
+					cout << "nim: " << nim << "berhasil dihapus" << endl;
+					system("pause");
+					system("cls");
+				}
+				else
+					cout << "Data Tidak Ditemukan" << endl;
 			}
 		}
 	}
